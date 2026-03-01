@@ -1,0 +1,51 @@
+.sidebar {
+  width: 250px;
+  background: #2d3e50;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+.sidebar a:hover {
+  background: #1abc9c;
+}
+
+.card {
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin: 20px;
+  padding: 20px;
+  flex: 1;
+}
+
+.kpi {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.chart {
+  height: 300px;
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .card {
+    margin: 10px;
+  }
+}
