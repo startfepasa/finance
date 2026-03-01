@@ -4,44 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financial Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Placeholder for CSS styles -->
 </head>
 <body>
-    <div class="sidebar">
-        <h2>Menu</h2>
-        <ul>
-            <li>Home</li>
-            <li>Reports</li>
-            <li>Settings</li>
-        </ul>
-    </div>
-    <div class="main-content">
-        <h1>Financial Dashboard</h1>
-        
-        <section class="fluxo-de-caixa">
-            <h2>Fluxo de Caixa</h2>
-            <!-- Content for Fluxo de Caixa -->
-        </section>
-        
-        <section class="kpis">
-            <h2>Key Performance Indicators</h2>
-            <!-- KPIs Content -->
-        </section>
-        
-        <section class="allocation">
-            <h2>50/30/20 Allocation</h2>
-            <!-- Allocation Chart -->
-        </section>
-        
-        <section class="monthly-evolution">
-            <h2>Monthly Evolution Chart</h2>
-            <!-- Chart Content -->
-        </section>
-        
-        <section class="debt-calendar">
-            <h2>Debt Calendar</h2>
-            <!-- Calendar Content -->
-        </section>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Dashboard Navigation</h2>
+            <ul>
+                <li><a href="#fluxo-caixa">Fluxo de Caixa</a></li>
+                <li><a href="#kpi">KPIs</a></li>
+                <li><a href="#allocation-chart">Allocation Chart</a></li>
+                <li><a href="#monthly-evolution">Monthly Evolution</a></li>
+                <li><a href="#debt-calendar">Debt Calendar</a></li>
+            </ul>
+        </aside>
+        <main>
+            <section id="fluxo-caixa">
+                <h2>Fluxo de Caixa Cards</h2>
+                <div class="fluxo-card"> <!-- Placeholder Card 1 -->
+                    <h3>Card Title 1</h3>
+                    <p>Content for card 1</p>
+                </div>
+                <div class="fluxo-card"> <!-- Placeholder Card 2 -->
+                    <h3>Card Title 2</h3>
+                    <p>Content for card 2</p>
+                </div>
+                <!-- Additional cards can be added here -->
+            </section>
+            <section id="kpi">
+                <h2>Key Performance Indicators (KPIs)</h2>
+                <div class="kpi">KPI 1: Value</div>
+                <div class="kpi">KPI 2: Value</div>
+                <!-- More KPIs can be added -->
+            </section>
+            <section id="allocation-chart">
+                <h2>Allocation Chart</h2>
+                <div class="chart"> <!-- Placeholder for Chart -->
+                    <p>Chart content goes here</p>
+                </div>
+            </section>
+            <section id="monthly-evolution">
+                <h2>Monthly Evolution Chart</h2>
+                <div class="chart"> <!-- Placeholder for Monthly Evolution -->
+                    <p>Chart content goes here</p>
+                </div>
+            </section>
+            <section id="debt-calendar">
+                <h2>Debt Calendar</h2>
+                <div class="calendar"> <!-- Placeholder for Debt Calendar -->
+                    <p>Calendar content goes here</p>
+                </div>
+            </section>
+        </main>
     </div>
 </body>
 </html>
