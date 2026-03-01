@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        #todo-form { 
+            margin-bottom: 20px;
+        }
+        #todo-list {
+            list-style: none;
+            padding: 0;
+        }
+        #todo-list li {
+            background: #fff;
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <h1>My To-Do List</h1>
+    <form id="todo-form">
+        <input type="text" id="todo-input" placeholder="Add a new task" required>
+        <button type="submit">Add</button>
+    </form>
+    <ul id="todo-list"></ul>
+    <script>
+        const form = document.getElementById('todo-form');
+        const input = document.getElementById('todo-input');
+        const todoList = document.getElementById('todo-list');
+
+        // Load todos from local storage
+        let todos = JSON.parse(localStorage.getItem('todos')) || [];
+
+        function renderTodos() {
+            todoList.innerHTML = '';
+            todos.forEach((todo, index) => {
+                const li = document.createElement('li');
+                li.textContent = todo;
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                deleteButton.onclick = () => {
+                    todos.splice(index, 1);
+                    localStorage.setItem('todos', JSON.stringify(todos));
+                    renderTodos();
+                };
+                li.appendChild(deleteButton);
+                todoList.appendChild(li);
+            });
+        }
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const todoText = input.value;
+            todos.push(todoText);
+            localStorage.setItem('todos', JSON.stringify(todos));
+            input.value = '';
+            renderTodos();
+        });
+
+        // Initial render
+        renderTodos();
+    </script>
+</body>
+</html>
